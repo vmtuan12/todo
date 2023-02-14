@@ -15,5 +15,16 @@ export default {
 </template>
 
 <style scoped>
-
+    button {
+        border-radius: 12px;
+        border: none;
+        background-color: aliceblue;
+        /* 182 */
+        cursor: pointer;
+        padding: 5px;
+    }
+    button:hover {
+        background-color: black;
+        color: aliceblue;
+    }
 </style>
