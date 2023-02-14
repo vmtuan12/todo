@@ -9,5 +9,11 @@ export default {
 </script>
 
 <template>
-    <button @click="bamnut">Add task</button>
+    <button @click="bamnut">
+        <slot></slot>
+    </button>
 </template>
+
+<style scoped>
+
+</style>
