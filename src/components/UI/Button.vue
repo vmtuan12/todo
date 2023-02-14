@@ -16,15 +16,16 @@ export default {
 
 <style scoped>
     button {
-        border-radius: 12px;
-        border: none;
+        border-radius: 15px;
+        border: 2px solid black;
         background-color: aliceblue;
-        /* 182 */
         cursor: pointer;
         padding: 5px;
+        
     }
     button:hover {
         background-color: black;
         color: aliceblue;
     }
+    
 </style>
