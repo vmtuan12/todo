@@ -4,7 +4,8 @@
             return {
                 list: [],
                 id: 0,
-                title: ref('')
+                title: '',
+                description: ''
             }
         },
         methods: {
@@ -17,7 +18,7 @@
                 this.list.push({
                     id: this.id++,
                     title: value,
-                    description: 'yeu ha phuong vl'
+                    description: ''
                 })
                 e.target.value = ''
             },
@@ -38,13 +39,17 @@ import { remove } from '@vue/shared';
 import { ref } from 'vue';
 import Card from '../UI/Card.vue';
 import InputField from '../UI/InputField.vue';
+import Input from '../UI/Input.vue';
 
 </script>
 
 <template>
     <InputField>
-        <template #input>
-            <input placeholder="add a new task" @keyup.enter="addTodo"/>
+        <template #inputTitle>
+            <Input v-model="title"/>
+        </template>
+        <template #inputDescription>
+            <Input v-model="description"/>
         </template>
         <!-- <template #button>
             <button @click="greet" type="submit">add task</button>

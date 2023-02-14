@@ -29,7 +29,9 @@
         border: 1.5px solid black;
         margin: auto;
         max-width: 600px;
-        height: fit-content;
+        background-color: whitesmoke;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.66);
+        margin-top: 10px;
     }
 
     .details {
