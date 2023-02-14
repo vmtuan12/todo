@@ -19,7 +19,7 @@
                     </h3>
                 </div>
             </div>
-            <div>
+            <div class="btn">
                 <slot name="button"></slot>
             </div>
         </div>
@@ -28,7 +28,7 @@
 
 <style scoped>
     .item {
-        
+        /* display: flex; */
         align-items: center;
         border-radius: 10px;
         border: 1.5px solid black;
@@ -55,14 +55,20 @@
 
     .details {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        /* flex-basis: 0; */
     }
 
+    .checked {
+        margin-left: 50px;
+    }
     .task {
         display: flex;
         flex-direction: column;
-        width: auto;
+        max-width: 300px;
+        padding: 5px;
+        /* margin-left: 40px; */
     }
     .title {
         display: flex;
@@ -70,6 +76,10 @@
     }
     .description {
         display: flex;
+    }
+    .btn {
+        display: flex;
+        margin-right: 20px;
     }
 
     h2 {
