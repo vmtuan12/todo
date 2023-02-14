@@ -9,18 +9,15 @@
             }
         },
         methods: {
-            addTodo(e) {
-                const value = e.target.value.trim()
-                console.log(value);
-                if(value === "") {
-                    return;
-                }
+            addTodo() {
+                
                 this.list.push({
                     id: this.id++,
-                    title: value,
-                    description: ''
+                    title: this.title,
+                    description: this.description
                 })
-                e.target.value = ''
+                this.title = ''
+                this.description = ''
             },
             removeTodo(id) {
                 const removedItemIndex = this.list.findIndex((e) => e.id === id)
@@ -35,11 +32,10 @@
 </script>
 
 <script setup>
-import { remove } from '@vue/shared';
-import { ref } from 'vue';
 import Card from '../UI/Card.vue';
 import InputField from '../UI/InputField.vue';
 import Input from '../UI/Input.vue';
+import Button from '../UI/Button.vue';
 
 </script>
 
@@ -51,9 +47,9 @@ import Input from '../UI/Input.vue';
         <template #inputDescription>
             <Input v-model="description"/>
         </template>
-        <!-- <template #button>
-            <button @click="greet" type="submit">add task</button>
-        </template> -->
+        <template #button>
+            <Button @pressed="addTodo">Add Task</Button>
+        </template>
     </InputField>
     <template v-for="item in list" :key="item.id">
         <Card>
@@ -62,7 +58,7 @@ import Input from '../UI/Input.vue';
             </template>
             <template #heading>{{ item.title }}</template>
             <template #button>
-                <button @click="removeTodo(item.id)">Remove todo</button>
+                <Button @pressed="removeTodo(item.id)">Remove todo</Button>
             </template>
         </Card>
     </template>
