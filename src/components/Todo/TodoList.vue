@@ -42,10 +42,10 @@ import Button from '../UI/Button.vue';
 <template>
     <InputField>
         <template #inputTitle>
-            <Input v-model="title"/>
+            <Input v-model="title" placeHolder="Title"/>
         </template>
         <template #inputDescription>
-            <Input v-model="description"/>
+            <Input v-model="description" placeHolder="Description"/>
         </template>
         <template #button>
             <Button @pressed="addTodo">Add Task</Button>
@@ -56,7 +56,8 @@ import Button from '../UI/Button.vue';
             <template #checked>
                 <input type="checkbox" id="checkbox"/>
             </template>
-            <template #heading>{{ item.title }}</template>
+            <template #heading>Task: {{ item.title }}</template>
+            <template #info>Task description: {{ item.description }}</template>
             <template #button>
                 <Button @pressed="removeTodo(item.id)">Remove todo</Button>
             </template>
@@ -65,23 +66,6 @@ import Button from '../UI/Button.vue';
 </template>
 
 <style scoped>
-    input {
-        border-radius: 10px;
-        border: 2px solid black;
-    }
-    input:focus {
-        background-color: antiquewhite;
-    }
-    button {
-        border-radius: 12px;
-        border: none;
-        background-color: aliceblue;
-        /* 182 */
-        cursor: pointer;
-        padding: 5px;
-    }
-    button:hover {
-        background-color: black;
-        color: aliceblue;
-    }
+    
+    
 </style>
