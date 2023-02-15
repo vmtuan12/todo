@@ -6,6 +6,9 @@
         <div class="details">
             <div class="checked">
                 <slot name="checked"></slot>
+                <h4>
+                    <slot name="index"></slot>
+                </h4>
             </div>
             <div class="task">
                 <div class="title">
@@ -33,14 +36,19 @@
         border-radius: 10px;
         border: 1.5px solid black;
         margin: auto;
-        max-width: 600px;
-        background-color: whitesmoke;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.66);
-        margin-top: 10px;
+        width: 600px;
+        min-height: 100px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.66);
+        margin-top: 30px;
         background-color: white;
+        transition: width 1s, height 2s, transform 2s;
         animation: card-appear 1s ease-in-out forwards;
     }
-
+    .item:hover {
+        width: 650px;
+        /* transform: rotate(180deg) */
+    }
+    
     @keyframes card-appear {
     from {
         opacity: 0;
@@ -61,21 +69,25 @@
     }
 
     .checked {
-        margin-left: 50px;
+        margin-left: 30px;
+        display: flex;
+        gap: 10px;
     }
     .task {
         display: flex;
         flex-direction: column;
         max-width: 300px;
         padding: 5px;
-        /* margin-left: 40px; */
+        min-width: 400px;
     }
     .title {
         display: flex;
         height: fit-content;
+        overflow: hidden;
     }
     .description {
         display: flex;
+        overflow: hidden;
     }
     .btn {
         display: flex;
@@ -85,5 +97,10 @@
     h2 {
         font-weight: bold;
         font-size: 30px;
+    }
+
+    h4 {
+        color: black;
+        font-size: 1.5rem;
     }
 </style>
