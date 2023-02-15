@@ -45,7 +45,7 @@
     }
 
     .item:hover {
-        width: 650px;
+        width: 645px;
         height: 120px;
         /* transform: rotate(180deg) */
     }
