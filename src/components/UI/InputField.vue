@@ -13,9 +13,9 @@
         <div class="dropdown">
             Style
             <div class="dropdown-content">
-                <p>vai lon</p>
-                <p>vai lon</p>
-                <p>vai lon</p>
+                <p>ab</p>
+                <p>vab</p>
+                <p>asd</p>
             </div>
         </div>
     </div>
