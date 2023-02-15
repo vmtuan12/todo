@@ -34,7 +34,6 @@
         /* display: flex; */
         align-items: center;
         border-radius: 10px;
-        border: 1.5px solid black;
         margin: auto;
         width: 600px;
         min-height: 100px;
