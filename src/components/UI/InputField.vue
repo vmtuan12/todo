@@ -39,6 +39,8 @@
         gap: 10px;
         transition: width 1s, height 1s, transform 2s;
         animation: card-appear 1s ease-in-out forwards;
+        position: relative;
+        z-index: 100;
         /* transition ko hoat dong neu co animation, height ko co transition */
     }
 
@@ -71,14 +73,15 @@
         background-color: #f9f9f9;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-    }
-    .dropdown-content:nth-child(even) {
-        color: red;
+        padding: 12px 16px;    
     }
     .dropdown:hover .dropdown-content {
         display: block;
+    }
+    .dropdown-content p {
+        border: 1.5px solid black;
+        margin-top: 5px;
+        text-indent: 5px;
     }
 
     .input {

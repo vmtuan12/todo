@@ -35,12 +35,14 @@
         align-items: center;
         border-radius: 10px;
         margin: auto;
+        position: relative;
+        z-index: 0;
         width: 600px;
         min-height: 100px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.66);
         margin-top: 30px;
         background-color: white;
-        transition: width 1s, height 2s, transform 2s;
+        transition: width 1s, background-color 2s, transform 2s;
         animation: card-appear 1s ease-in-out forwards;
     }
     .item:hover {
