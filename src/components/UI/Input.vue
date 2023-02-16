@@ -17,9 +17,10 @@ export default {
 <style scoped>
     input {
         border-radius: 7px;
-        border: 2px solid black;
+        border: 2px solid rgb(81, 81, 81);
     }
     input:focus {
-        background-color: antiquewhite;
+        background-color: rgb(81, 81, 81);
+        color: white;
     }
 </style>
