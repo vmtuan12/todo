@@ -40,7 +40,7 @@
         transition: width 1s, height 1s, transform 2s;
         animation: card-appear 1s ease-in-out forwards;
         position: relative;
-        z-index: 100;
+        z-index: 10;
         /* transition ko hoat dong neu co animation, height ko co transition */
     }
 
