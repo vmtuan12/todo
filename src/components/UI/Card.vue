@@ -31,7 +31,7 @@
 
 <style scoped>
     .item {
-        /* display: flex; */
+        display: flex;
         align-items: center;
         border-radius: 10px;
         margin: auto;
@@ -66,6 +66,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 600px;
         /* flex-basis: 0; */
     }
 
@@ -77,9 +78,7 @@
     .task {
         display: flex;
         flex-direction: column;
-        max-width: 300px;
-        padding: 5px;
-        min-width: 400px;
+        min-width: 350px;
     }
     .title {
         display: flex;
