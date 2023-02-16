@@ -5,12 +5,16 @@
                 list: [],
                 id: 0,
                 title: '',
+                errorInput: false,
                 description: ''
             }
         },
         methods: {
             addTodo() {
-                
+                if(this.title === '' || this.description === '') {
+                    this.errorInput = true
+                    return;
+                }
                 this.list.push({
                     id: this.id++,
                     title: this.title,
@@ -26,6 +30,9 @@
                 if(this.list.length === 0) {
                     this.id = 0
                 }
+            },
+            removeModal() {
+                this.errorInput = false
             }
         }
     }
@@ -36,10 +43,15 @@ import Card from '../UI/Card.vue';
 import InputField from '../UI/InputField.vue';
 import Input from '../UI/Input.vue';
 import Button from '../UI/Button.vue';
+import ErrorModal from '../UI/ErrorModal.vue'
 
 </script>
 
 <template>
+    <div v-if="errorInput" class="error-modal">
+        <ErrorModal @modalOff="removeModal"/>
+    </div>
+    
     <InputField>
         <template #inputTitle>
             <Input v-model="title" placeHolder="Title"/>
@@ -56,6 +68,7 @@ import Button from '../UI/Button.vue';
             <template #checked>
                 <input type="checkbox" id="checkbox"/>
             </template>
+            <template #index>{{ list.indexOf(item) }}</template>
             <template #heading>Task: {{ item.title }}</template>
             <template #info>Task description: {{ item.description }}</template>
             <template #button>
@@ -66,6 +79,8 @@ import Button from '../UI/Button.vue';
 </template>
 
 <style scoped>
-    
-    
+    .error-modal {
+        display: flex;
+        justify-content: center;
+    }
 </style>
