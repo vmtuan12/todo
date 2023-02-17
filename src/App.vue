@@ -41,18 +41,20 @@ export default {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-
     }
 
     a {
-        color: rgb(180, 180, 180);
-        font-size: 25px;
+        box-shadow: inset 0 0 0 0 #bebebe;
+        color: #b4b4b4;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        transition: color .5s ease-in-out, box-shadow .3s ease-in-out;
         text-decoration: none;
-        transition: font-size 0.25s;
+        font-size: 25px;
     }
 
     a:hover {
-        color: rgb(255, 255, 255);
-        font-size: 27px;
+        box-shadow: inset 0 0 0 20px #bebebe;
+        color: white;
     }
 </style>
