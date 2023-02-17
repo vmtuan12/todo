@@ -37,7 +37,7 @@
         background-color: whitesmoke;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.66);
         gap: 10px;
-        transition: width 1s, height 1s, transform 2s;
+        transition: width 0.5s, height 1s, transform 2s, box-shadow 0.5s;
         animation: card-appear 1s ease-in-out forwards;
         position: relative;
         z-index: 10;
@@ -47,6 +47,7 @@
     .item:hover {
         width: 645px;
         height: 120px;
+        box-shadow: 0 30px 40px rgba(0, 0, 0, 0.66);
         /* transform: rotate(180deg) */
     }
 

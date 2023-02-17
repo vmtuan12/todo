@@ -42,10 +42,12 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.66);
         margin-top: 30px;
         background-color: white;
-        transition: width 1s, background-color 2s, transform 2s;
+        transition: width 0.5s, background-color 2s, transform 2s, box-shadow 0.5s;
         animation: card-appear 1s ease-in-out forwards;
     }
     .item:hover {
+        /* background-color: black; */
+        box-shadow: 0 30px 40px rgba(0, 0, 0, 0.66);
         width: 650px;
         /* transform: rotate(180deg) */
     }
