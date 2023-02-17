@@ -48,6 +48,7 @@ import ErrorModal from '../UI/ErrorModal.vue'
 </script>
 
 <template>
+    <a class="bigTitle" href="#/">To-do List</a>
     <div v-if="errorInput" class="error-modal">
         <ErrorModal @modalOff="removeModal"/>
     </div>
@@ -83,4 +84,83 @@ import ErrorModal from '../UI/ErrorModal.vue'
         display: flex;
         justify-content: center;
     }
+
+    .bigTitle {
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        text-shadow: 0 10px 10px black;
+        transition: font-size 0.75s;
+        width: fit-content;
+        margin: auto;
+        text-decoration: none;
+        /* animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; */
+        animation: out 0.5s;
+        transform: translate3d(0, 0, 0);
+    }
+    .bigTitle:hover {
+        font-size: 45px;
+        color: black;
+        animation: in 0.5s ease-in-out;
+    }
+    @keyframes in {
+        from {
+            /* transform: rotate(0deg); */
+            font-size: 40px;
+            color: aliceblue;
+        }
+        to {
+            /* transform: rotate(360deg); */
+            font-size: 45px;
+            color: black;
+        }
+    }
+    @keyframes out {
+        from {
+            /* transform: rotate(360deg); */
+            font-size: 45px;
+            color: black;
+        }
+        to {
+            /* transform: rotate(0deg); */
+            font-size: 40px;
+            color: aliceblue;
+        }
+    }
+    @keyframes shake {
+        10%,
+        90% {
+            transform: translate3d(-5px, 0, 0);
+        }
+
+        20%,
+        80% {
+            transform: translate3d(5px, 0, 0);
+        }
+
+        30%,
+        50%,
+        70% {
+            transform: translate3d(-5px, 0, 0);
+        }
+
+        40%,
+        60% {
+            transform: translate3d(5px, 0, 0);
+        }
+    }
+    @keyframes title-appear {
+        from {
+            opacity: 0;
+            /* font-size: 0px; */
+            transform: scaleX(0);
+        }
+        to {
+            opacity: 1;
+            /* font-size: 40px; */
+            transform: scaleX(1);
+        }
+    }
+
 </style>
